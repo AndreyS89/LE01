@@ -7,11 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	let age = 26 // number
 	const isProgrammer = true // boolean
 
-	const   = 'private'
+	// const   = 'private'
 	const $ = 'some value'
 
 	// const if = 'mkef' // err
 	const withNum = '5'
-	// const 5withNum = 5 // err
+	// ---------------------------------------------------------------------
+	
+	// 2 Мутирование
+	console.log('Имя еловека: ' + firstName + ', а возраст еловека: ' + age)
 
 });
