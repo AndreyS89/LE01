@@ -72,4 +72,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 6 Условные операторы
+	// const courseStatus = 'ready' // ready, fail, pending
+
+	// if (courseStatus === 'ready') {
+	// 	console.log('Курс уже готов и его можно проходить')
+	// } else if (courseStatus === 'pending') {
+	// 	console.log('Курс пока находится в процессе разработке')
+	// } else {
+	// 	console.log('Курс не получился')
+	// }
+
+	const isReady = false
+
+	// if (isReady) {
+	// 	console.log('Всё готово')
+	// } else {
+	// 	console.log('Всё не готово!')
+	// }
+
+	isReady ? console.log('Всё готово!') : console.log('Всё не готово!')
+
+
+	// const num1 = 42 // number
+	// const num2 = '42' // string
+
+	// console.log(num1 === num2)
+
 });
