@@ -50,16 +50,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 4 Типы данных
-	const isProgrammer = true
-	const name = 'Andrey'
-	const age = '31'
-	let x 
-	console.log(typeof isProgrammer)
-	console.log(typeof name)
-	console.log(typeof age)
-	console.log(typeof x)
-	console.log(null)
+	// const isProgrammer = true
+	// const name = 'Andrey'
+	// const age = '31'
+	// let x 
+	// console.log(typeof isProgrammer)
+	// console.log(typeof name)
+	// console.log(typeof age)
+	// console.log(typeof x)
+	// console.log(null)
 
 	// ---------------------------------------------------------------------	
 	// 5 Приоритет операторов
+	// const fullAge = 31
+	// const birdYear = 1989
+	// const currentYear = 2020
+
+	// // > < >= <=
+	// const isFullAge = currentYear - birdYear >= fullAge // 
+	// console.log(isFullAge)
+
+	// ---------------------------------------------------------------------	
+	// 6 Условные операторы
 });
