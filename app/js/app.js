@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	console.log('Всё не готово!')
 	// }
 
+	// Тернарное выражение
 	isReady ? console.log('Всё готово!') : console.log('Всё не готово!')
 
 
@@ -97,5 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	// const num2 = '42' // string
 
 	// console.log(num1 === num2)
+
+	// ---------------------------------------------------------------------	
+	// 7 Булевая логика
 
 });
