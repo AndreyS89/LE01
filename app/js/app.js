@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	console.log('Курс не получился')
 	// }
 
-	const isReady = false
+	// const isReady = false
 
 	// if (isReady) {
 	// 	console.log('Всё готово')
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// }
 
 	// Тернарное выражение
-	isReady ? console.log('Всё готово!') : console.log('Всё не готово!')
+	// isReady ? console.log('Всё готово!') : console.log('Всё не готово!')
 
 
 	// const num1 = 42 // number
@@ -102,4 +102,31 @@ document.addEventListener("DOMContentLoaded", function() {
 	// ---------------------------------------------------------------------	
 	// 7 Булевая логика
 
+	// ---------------------------------------------------------------------	
+	// 8 Функции
+	function calculateAge(year) {
+		return 2020 - year
+	}
+
+	// const myAge = calculateAge(1989)
+	// console.log(myAge)
+	// console.log(calculateAge(1986))
+
+	function logInfoAbout(name, year) {
+		const age = calculateAge(year)
+
+		if (age > 0) {
+			console.log('Человек по имени ' + name + ' ему сейчас: ' + age)
+		} else {
+			console.log('Вообще-то это уже будущее!')
+		}		 
+	}
+
+	logInfoAbout('Andery', 2222)
+
+	// ---------------------------------------------------------------------	
+	// 9 Массивы
+
 });
+
+
