@@ -126,6 +126,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 9 Массивы
+	const cars = ['Mazda', 'Mercedes', 'Ford']
+	console.log(cars)
+
+	console.log(cars[0])
+	console.log(cars[1])
+	console.log(cars[2])
 
 });
 
