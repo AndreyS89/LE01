@@ -112,26 +112,33 @@ document.addEventListener("DOMContentLoaded", function() {
 	// console.log(myAge)
 	// console.log(calculateAge(1986))
 
-	function logInfoAbout(name, year) {
-		const age = calculateAge(year)
+	// function logInfoAbout(name, year) {
+	// 	const age = calculateAge(year)
 
-		if (age > 0) {
-			console.log('Человек по имени ' + name + ' ему сейчас: ' + age)
-		} else {
-			console.log('Вообще-то это уже будущее!')
-		}		 
-	}
+	// 	if (age > 0) {
+	// 		console.log('Человек по имени ' + name + ' ему сейчас: ' + age)
+	// 	} else {
+	// 		console.log('Вообще-то это уже будущее!')
+	// 	}		 
+	// }
 
-	logInfoAbout('Andery', 2222)
+	// logInfoAbout('Andery', 2222)
 
 	// ---------------------------------------------------------------------	
 	// 9 Массивы
 	const cars = ['Mazda', 'Mercedes', 'Ford']
-	console.log(cars)
+	// console.log(cars)
+	// console.log(cars.length)
+	// console.log(cars[0])
+	// console.log(cars[1])
+	// console.log(cars[2])
 
-	console.log(cars[0])
-	console.log(cars[1])
-	console.log(cars[2])
+	// cars[0] = 'Porsche'
+	// cars[2] = 'Mazda'
+	// console.log(cars)
+
+	// ---------------------------------------------------------------------	
+	// 10 Циклы
 
 });
 
