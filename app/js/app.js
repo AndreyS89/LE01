@@ -152,6 +152,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 11 Объекты (группировка)
+	const person = {
+		firsName: 'Andrey',
+		lastName: 'Samarin',
+		year: 1989,
+		languages: ['Ru', 'En', 'Fr']
+	}
 
 });
 
