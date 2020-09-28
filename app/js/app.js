@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 9 Массивы
-	const cars = ['Mazda', 'Mercedes', 'Ford']
+	// const cars = ['Mazda', 'Mercedes', 'Ford']
 	// console.log(cars)
 	// console.log(cars.length)
 	// console.log(cars[0])
@@ -139,6 +139,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 10 Циклы
+	// const cars = ['Mazda', 'Mercedes', 'Ford']
+
+	// for (let i = 0; i < cars.length; i++) {
+	// 	const car = cars[i]
+	// 	console.log(car)
+	// }
+
+	// for (let car of cars) {
+	// 	console.log(car)
+	// }
+
+	// ---------------------------------------------------------------------	
+	// 11 Объекты (группировка)
 
 });
 
