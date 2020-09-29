@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// ---------------------------------------------------------------------	
 	// 8 Функции
-	function calculateAge(year) {
-		return 2020 - year
-	}
+	// function calculateAge(year) {
+	// 	return 2020 - year
+	// }
 
 	// const myAge = calculateAge(1989)
 	// console.log(myAge)
@@ -153,11 +153,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	// ---------------------------------------------------------------------	
 	// 11 Объекты (группировка)
 	const person = {
-		firsName: 'Andrey',
+		firstName: 'Andrey',
 		lastName: 'Samarin',
 		year: 1989,
-		languages: ['Ru', 'En', 'Fr']
+		languages: ['Ru', 'En', 'Fr'],
+		hasWife: false,
+		greet: function() {
+			console.log('greet for person')
+		}
 	}
+
+	console.log(person.firstName)
+	console.log(person['lastName'])
+	const key = 'year'
+	console.log(person[key])
+	person.hasWife = true
+	console.log(person)
+	person.isProgrammer = true
+	console.log(person)
+
+	person.greet()
 
 });
 
