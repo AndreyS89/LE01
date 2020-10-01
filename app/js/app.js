@@ -28,6 +28,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// console.log(parseFloat(stringInt) + 2)
 	// console.log(+stringInt + 2)
+
+	// console.log(0.4 + 0.6) // 0.6
+	// console.log((0.4 + 0.6).toFixed(1)) // 0.6
+	// console.log(parseFloat(0.4 + 0.6).toFixed(1)) // 0.6	
+
+	// BigInt
+	console.log(909090909897979798789789n - 9090909098979797989n)
+	console.log(909090909897979798789789n)
+	// console.log(typeof 909090909897979798789789.879789798n) // error	
+
+	// console.log(10n - 4) // error
+	// console.log(parseInt(10n) - 4)
+	console.log(10n - BigInt(4))
+	console.log(5n / 2n)
+
 	
 });
 
