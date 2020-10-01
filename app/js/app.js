@@ -33,16 +33,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	// console.log((0.4 + 0.6).toFixed(1)) // 0.6
 	// console.log(parseFloat(0.4 + 0.6).toFixed(1)) // 0.6	
 
-	// BigInt
-	console.log(909090909897979798789789n - 9090909098979797989n)
-	console.log(909090909897979798789789n)
+	// 2 BigInt
+	// console.log(909090909897979798789789n - 9090909098979797989n)
+	// console.log(909090909897979798789789n)
 	// console.log(typeof 909090909897979798789789.879789798n) // error	
 
 	// console.log(10n - 4) // error
 	// console.log(parseInt(10n) - 4)
-	console.log(10n - BigInt(4))
-	console.log(5n / 2n)
+	// console.log(10n - BigInt(4))
+	// console.log(5n / 2n)
+	
+	// 3 Math 
+	console.log(Math.E)
+	console.log(Math.PI)
 
+	console.log(Math.sqrt(25))
+	console.log(Math.pow(5, 3))
+	console.log(Math.abs(-42))
+	console.log(Math.max(42, 23, 3, 11))
+	console.log(Math.floor(4.9))
+	console.log(Math.ceil(4.9))
 	
 });
 
