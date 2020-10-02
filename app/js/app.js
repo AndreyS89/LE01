@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	console.log(Math.max(42, 23, 3, 11))
 	console.log(Math.floor(4.9))
 	console.log(Math.ceil(4.9))
-	
+	// 2.15:10
 });
 
 
