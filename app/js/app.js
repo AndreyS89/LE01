@@ -36,13 +36,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	// console.log(string.trimRight())    // Очистить только справа
 
 	function logPerson(s, name, age) {
-		return 'Info about person'
+        if (age < 0) {
+            age = 'Ешё не родился'
+        }
+        return `${s[0]}${s[1]}${age}${s[2]}`
 	}
 
 	const personName = 'Андрей'
+	const personName2 = 'Антон'
 	const personAge = 31
+	const personAge2 = -2
 
-	const output = logPerson`Имя: ${}, Возраст: ${}`
+    const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`
+    const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`
+    
+    console.log(output)
+    console.log(output2)
 
 	// 2:37:20
 });
