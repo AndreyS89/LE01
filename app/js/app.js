@@ -35,25 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	// console.log(string.trimLeft())     // Очистить только слева
 	// console.log(string.trimRight())    // Очистить только справа
 
-	function logPerson(s, name, age) {
+    function logPerson(s, name, age) {
         if (age < 0) {
             age = 'Ешё не родился'
         }
-        return `${s[0]}${s[1]}${age}${s[2]}`
-	}
+        return `${s[0]}${name}${s[1]}${age}${s[2]}`
+    }
 
-	const personName = 'Андрей'
-	const personName2 = 'Антон'
-	const personAge = 31
-	const personAge2 = -2
+    const personName = 'Андрей'
+    const personName2 = 'Антон'
+    const personAge = 31
+    const personAge2 = -2
 
     const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`
     const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`
-    
+
     console.log(output)
     console.log(output2)
 
-	// 2:37:20
+	// 2:41:19
 });
 
 
