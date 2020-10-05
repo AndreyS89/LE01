@@ -1,59 +1,61 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// const name = 'Андрей'
-	// const age = 31
-
-	// function getAge() {
-	// 	return age
+	// 1. Фунция
+	// Funcion Declaration
+	// function greet(name) {
+	// 	console.log('Привет - ', name)
 	// }
 
-	// const output = 'Привет, меня зовут: ' + name + ' и мой возраст: ' + age + ' год.'
-	// const output = `Привет меня зовут ${name} и мой возраст ${age < 20 ? 'A' : 'B'} год.`	
+	// Function Expression
+	// const greet2 = function greet2(name) {
+	// 	console.log('Привет2 - ', name)
+	// } 
 
-	// const output = `
-	// 	<div>This is div</div'
-	// 	<p>This is p</p>
-	// `
+	// greet('Лена')
+	// greet2('Лена')
 
-	// console.log(output)
-	// 2.28:41
+	// console.log(typeof greet)
+	// console.dir(greet)
 
-	// const name = 'Andrey'
-	// console.log(name.length)           // Узнать длину строки
-	// console.log(name.toUpperCase)      // Сделать большими буквами
-	// console.log(name.toLowerCase)      // Сделать маленькими буквами
-	// console.log(name.charAt(2))        // Вывести 2 символ строки
-	// console.log(name.indexOf('dr'))    // Проверить есть ли 'dr' в строке
-	// console.log(name.startsWith('D'))  // Проверить начало строки на 'D'
-	// console.log(name.toLowerCase().startsWith('a'))   // Сделать маленькми буквами и проверить строку на начало 'a'
-	// console.log(name.endsWith('ey'))   // Проверить заканчивается ли строка на 'ey'
-	// console.log(name.repeat(3))        // Повторить строку 3 раза
+	// 2. Анонимные функции
+	// let counter = 0
+	// const interval = setInterval(function() {
+	// 	if (counter === 5) { 
+	// 		clearInterval(interval)  // clearTimeout
+	// 	} else {
+	// 		console.log(++counter)
+	// 	}		
+	// }, 1000)
 
-	// const string = '     password     '
-	// console.log(string)
-	// console.log(string.trim())         // Очистить строку от пробелов
-	// console.log(string.trimLeft())     // Очистить только слева
-	// console.log(string.trimRight())    // Очистить только справа
+	// 3. Стрелочные функции
+	// const arrow1 = (name) => {
+	// 	console.log('Привет - ', name)
+	// }
+	// arrow1('Andrey')
 
-    // function logPerson(s, name, age) {
-    //     if (age < 0) {
-    //         age = 'Ешё не родился'
-    //     }
-    //     return `${s[0]}${name}${s[1]}${age}${s[2]}`
-    // }
+	// const arrow2 = name => console.log('Привет - ', name)
+	// arrow2('Andrey')
 
-    // const personName = 'Андрей'
-    // const personName2 = 'Антон'
-    // const personAge = 31
-    // const personAge2 = -2
+	// const pow2 = num => num ** 2
+	// console.log(pow2(5))
 
-    // const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`
-    // const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`
+	// 4. Параметры по умолчанию
+	// const sum = (a = 40, b = a * 2) => a + b
 
-    // console.log(output)
-    // console.log(output2)
+	// console.log(sum(41, 1))
+	// console.log(sum())
 
-	// 2:41:19
+	function sumAll(...all) {
+		let result = 0
+		for (let num of all) {
+			result += num
+		}
+		return result
+	}
+
+	const res = sumAll(1, 2, 3, 4, 5)
+	console.log(res)
+
 });
 
 
