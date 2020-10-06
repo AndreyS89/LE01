@@ -45,16 +45,29 @@ document.addEventListener("DOMContentLoaded", function() {
 	// console.log(sum(41, 1))
 	// console.log(sum())
 
-	function sumAll(...all) {
-		let result = 0
-		for (let num of all) {
-			result += num
-		}
-		return result
-	}
+    // function sumAll(...all) {
+    //     let result = 0
+    //     for (let num of all) {
+    //         result += num
+    //     }
+    //     return result
+    // }
 
-	const res = sumAll(1, 2, 3, 4, 5)
-	console.log(res)
+    // const res = sumAll(1, 2, 3, 4, 5)
+    // console.log(res) 
+
+    // 5. Замыкани
+    // function createMember(name) {
+    //     return function(lastName) {
+    //         console.log(name + lastName)
+    //     }
+    // }
+
+    // const logWithLastName = createMember('Andrey')
+    // console.log(logWithLastName)
+    // console.log(logWithLastName('Minin'))
+
+    // 3:03:40
 
 });
 
