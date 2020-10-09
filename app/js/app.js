@@ -6,19 +6,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // console.log(cars)
 
     // Function
-    function addItemToEnd() {
-
-    }
+    // function addItemToEnd() {
+    // }
 
     //Method
-    cars.push('Рено')                // Добавляет в конец массива
-    cars.unshift('Волга')            // Добавляет в начало массива
-    const firstItem = cars.shift()   // Удаляет и возращает первый элемент из массива
-    const lastCar = cars.pop()       // Удаляет и возращает последний элемент из массива
-    console.log(firstItem)
-    console.log(cars)
+    // cars.push('Рено')                // Добавляет в конец массива
+    // cars.unshift('Волга')            // Добавляет в начало массива
+    // const firstItem = cars.shift()   // Удаляет и возращает первый элемент из массива
+    // const lastCar = cars.pop()       // Удаляет и возращает последний элемент из массива
+    // console.log(firstItem)
+    // console.log(cars)
 
-    // 3:14:15
+    // console.log(cars.reverse())
+    // console.log(cars)
+
+    // Задача 1
+    // const text = 'Привет, мы изучаем JavaScript'
+    // const reverseText = text.split('').reverse().join('')
+    // console.log(reverseText)
+
+    // 3:20:00
 
 });
 
