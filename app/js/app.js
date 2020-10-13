@@ -44,17 +44,26 @@ document.addEventListener("DOMContentLoaded", function() {
     //     return person.budget === 3500
     // })
 
-    const person = people.find(function(person) {
-        return person.budget === 3500
+    // const person = people.find(function(person) {
+    //     return person.budget === 3500
+    // })
+
+    // const person = people.find(person => person.budget === 3500)
+    // console.log(person)
+
+    // console.log(cars.includes('Мазда'))
+
+    const upperCaseCars = cars.map(car => {
+        return car.toUpperCase()
     })
-    console.log(person)
+    console.log(upperCaseCars)
 
     // Задача 1
     // const text = 'Привет, мы изучаем JavaScript'
     // const reverseText = text.split('').reverse().join('')
     // console.log(reverseText)
 
-    // 3:27:00
+    // 3:31:24
 
 });
 
