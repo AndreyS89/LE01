@@ -53,17 +53,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // console.log(cars.includes('Мазда'))
 
-    const upperCaseCars = cars.map(car => {
-        return car.toUpperCase()
-    })
-    console.log(upperCaseCars)
+    // const upperCaseCars = cars.map(car => {
+    //     return car.toUpperCase()
+    // })
+    // console.log(upperCaseCars)
+    // console.log(cars)
+
+    const pow2 = num => num ** 2
+    const sqrt = num => Math.sqrt(num)
+
+    const pow2Fib = fib.map(pow2).map(Math.sqrt)
+
+    console.log(fib)
+    console.log(pow2Fib)
 
     // Задача 1
     // const text = 'Привет, мы изучаем JavaScript'
     // const reverseText = text.split('').reverse().join('')
     // console.log(reverseText)
 
-    // 3:31:24
+    // 3:34:52
 
 });
 
