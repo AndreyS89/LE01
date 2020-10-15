@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // 1. Массивы
     const cars = ['Мазда', 'Форд', 'БМВ', 'Мерседес',]	
 
-    const people = [
-        {name: 'Andrey', budget: 4200},
-        {name: 'Elena', budget: 3500},
-        {name: 'Victoria', budget: 1700}
-    ]
+    // const people = [
+    //     {name: 'Andrey', budget: 4200},
+    //     {name: 'Elena', budget: 3500},
+    //     {name: 'Victoria', budget: 1700}
+    // ]
 
     const fib = [1, 1, 2, 3, 5, 8, 13]
     // console.log(cars)
@@ -59,18 +59,42 @@ document.addEventListener("DOMContentLoaded", function() {
     // console.log(upperCaseCars)
     // console.log(cars)
 
-    const pow2 = num => num ** 2
-    const sqrt = num => Math.sqrt(num)
+    // const pow2 = num => num ** 2
+    // const sqrt = num => Math.sqrt(num)
 
-    const pow2Fib = fib.map(pow2).map(Math.sqrt)
+    // const pow2Fib = fib.map(pow2).map(Math.sqrt)
 
-    console.log(fib)
-    console.log(pow2Fib)
+    // console.log(fib)
+    // console.log(pow2Fib)
+    
+    // const pow2 = num => num ** 2
+    // const pow2Fib = fib.map(pow2)
+    // const filtersNumbers = pow2Fib.filter(num => num > 20)
+
+    // console.log(pow2Fib)
+    // console.log(filtersNumbers)
 
     // Задача 1
     // const text = 'Привет, мы изучаем JavaScript'
     // const reverseText = text.split('').reverse().join('')
     // console.log(reverseText)
+
+
+    const people = [
+        {name: 'Andrey', budget: 4200},
+        {name: 'Elena', budget: 3500},
+        {name: 'Victoria', budget: 1700}
+    ]
+
+    const allBudget = people
+        .filter(person => person.budget > 2000)
+        .reduce((acc, person) => {
+            acc += person.budget     
+            return acc
+    }, 0)
+
+    console.log(allBudget)
+
 
     // 3:34:52
 
