@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(person.name)
     console.log(person['age'])
 
-    // 3:34:52
+    // 3:48:23
 
 });
 
