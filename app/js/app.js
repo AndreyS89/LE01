@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // ['key_' + (1 + 3)]: 'Computed Key', // key_4
         greet() {
             console.log('greet from person')
+        },
+        info() {
+            console.log('this:', this)
+            console.info('Информация про человека п оимени:', this.name)
         }
     }
 
@@ -41,19 +45,30 @@ document.addEventListener("DOMContentLoaded", function() {
     //     }        
     // }
 
-    const keys = Object.keys(person)
+    // const keys = Object.keys(person)
     // console.log(keys)
 
     // const values = Object.values(person)
     // console.log(values)
 
-    keys.forEach((key) => {
-        console.log('key: ', key)
-        console.log('value: ', person[key])
-    })
+    // keys.forEach((key) => {
+    //     console.log('key: ', key)
+    //     console.log('value: ', person[key])
+    // })
 
 
-    // 4:03:07
+    // Context
+    // person.info()
+
+    const logger = {
+        keys() {
+            console.log('Objet Keys:', Object.keys(this))
+        }
+    }
+
+    logger.keys(person)
+
+    // 4:07:33
 
 });
 
