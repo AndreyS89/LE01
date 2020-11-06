@@ -68,16 +68,18 @@ document.addEventListener("DOMContentLoaded", function() {
         keysAndValues() {
             Object.keys(this).forEach(key => {
                 console.log(`"${key}": ${this[key]}`)
-            })
-        }
-    }
+            })        
+
+        withParams(top = false, between = false, bottom = false)
 
     // const bound = logger.keys.bind(person)
     // bound()
 
     // logger.keys.call(person)
 
-    logger.keysAndValues.call(logger)
+    // logger.keysAndValues.call(logger)
+
+    logger.withParams.call(person)
 
     // 4:12:30
 
