@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         info() {
             console.log('this:', this)
-            console.info('Информация про человека п оимени:', this.name)
+            console.info('Информация про человека поимени:', this.name)
         }
     }
 
@@ -66,22 +66,40 @@ document.addEventListener("DOMContentLoaded", function() {
         },
 
         keysAndValues() {
-            Object.keys(this).forEach(key => {
+            // Object.keys(this).forEach(key => {
+            //     console.log(`"${key}": ${this[key]}`)
+            // })        
+            Object.keys(this).forEach(function(key) {
                 console.log(`"${key}": ${this[key]}`)
-            })        
+            }.bind(this))
+        },
 
-        withParams(top = false, between = false, bottom = false)
+        withParams(top = false, between = false, bottom = false) {
+            if (top) {
+                console.log('------------ START ------------')
+            }
+            
+            Object.keys(this).forEach((key, index, array) => {
+                console.log(`"${key}": ${this[key]}`)
+                if (between && index !== array.length - 1) {
+                    console.log('------------------------')
+                }
+            })
+
+            if (top) {
+                console.log('------------ END ------------')
+            }
+        }
+    }
 
     // const bound = logger.keys.bind(person)
     // bound()
-
-    // logger.keys.call(person)
-
     // logger.keysAndValues.call(logger)
+    logger.withParams.call(person, true, true, true)
+    logger.withParams.apply(person, [true, true, true])
+    
 
-    logger.withParams.call(person)
-
-    // 4:12:30
+    // 4:20:00
 
 });
 
