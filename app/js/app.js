@@ -15,15 +15,31 @@ document.addEventListener("DOMContentLoaded", function() {
     // clearTimeout(timeout)
 
     
-    const delay = (callback, wait = 1000) => {
-        setTimeout(callback, wait)
-    }
+    // const delay = (callback, wait = 1000) => {
+    //     setTimeout(callback, wait)
+    // }
     
-    delay(() => {
-        console.log('After 2 second')
-    }, 2000)
+    // delay(() => {
+    //     console.log('After 2 second')
+    // }, 2000)
 
-    // 4:26:29
+    const delay = (wait = 1000) => {
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve()
+            }, wait)
+        })
+        return promise
+    }
+
+    delay(2500)
+        .then(() => {
+            console.log('After 2 second')
+        })
+        .catch(err => console.error(err))
+        .finally(() => console.log('Finally'))
+
+    // 4:31:14
 
 });
 
