@@ -26,18 +26,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const delay = (wait = 1000) => {
         const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
-                reject('Что-то пошло не так. Повторите попытку')
+                resolve()
+                // reject('Что-то пошло не так. Повторите попытку')
             }, wait)
         })
         return promise
     }
 
-    delay(2500)
-        .then(() => console.log('After 2 second'))
-        .catch(err => console.error('Error: ', err))
-        .finally(() => console.log('Finally'))
+    // delay(2500)
+    //     .then(() => console.log('After 2 second'))
+    //     .catch(err => console.error('Error: ', err))
+    //     .finally(() => console.log('Finally'))
 
-    // 4:31:14
+    const getData = () => new Promise(resolve => resolve([
+        1, 1, 2, 3, 5, 8, 13
+    ]))
+
+    getData().then(data => console.log(data))
+
+    function asyncExample() {
+        delay(3000)
+    }
+
+    // 4:35:30
 
 });
 
