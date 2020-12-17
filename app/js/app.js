@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } finally {
             console.log('Finally');
         }
-    }
+    } 
 
     asyncExample()
 
