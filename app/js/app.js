@@ -5,9 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const heading = document.getElementById('hello')
 
-    console.log(heading)
+    console.dir(heading.id)
+    console.dir(heading.textContent)
 
-    // 4:53:45
+    heading.textContent = 'Changed from JavaScript'
+    
+    // 4:59:19
 
 });
 
