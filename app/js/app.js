@@ -6,8 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const heading = document.getElementById('hello')
     // const heading2 = document.getElementsByTagName('h2')[0]
     // const heading2 = document.getElementsByClassName('h2-class')[0]
-    // console.log(heading2)
+    // const heading2 = document.querySelector('.h2-class')
+    // const heading2 = document.querySelector('#sub-hello')
+    const heading2 = document.querySelector('h2')
+
+    console.log(heading2)
     
+    const heading3 = heading2.nextElementSibling
+    
+    console.log(heading3)
+
     // console.dir(heading.id)
     // console.dir(heading.textContent)
 
@@ -23,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         heading.style.padding = '2rem'
     }
     
-    // 4:59:19
+    // 5:14:08
 
 });
 
