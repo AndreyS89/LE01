@@ -1,29 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Урок 1. JavaScript. Что такое prototype. JavaScript Prototype (English Subs)
+    // Урок 2. JavaScript. Что такое контекст this. Как работает call, bind, apply
     // -------------------------------------- //
 
-    // const person = {
-        // name: 'Andrey',
-        // age: 31,
-        // greet: function() {
-        //     console.log('Greet!')
-        // }
-        // }
-        
-    const person = new Object({
+    function hello() {
+        console.log('Hello', this)
+    }
+    
+    const person = {
         name: 'Andrey',
         age: 31,
-        greet: function() {
-            console.log('Greet!')
-        }        
-    })
-
-    Object.prototype.sayHello = function() {
-        console.log('Hello!')
+        sayHello: hello,
+        sayHelloWindow: hello.bind(window),
+        logInfo: function() {
+            console.log(`Name is ${this.name}`)
+            console.log(`Age is ${this.age}`)
+        }
     }
 
-    const lena = Object.create(person)
-    lena.name = 'Elena'
+    const lena = {
+        name: 'Elena',
+        age: 23
+    }
+
+    person.logInfo.bind(lena)()
+
+    // -------------------------------------- //
+    // TIME | 9:33
         
 });
