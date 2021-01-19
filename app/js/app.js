@@ -41,12 +41,24 @@ document.addEventListener("DOMContentLoaded", function() {
     //         return i * n
     //     })
     // }
+    
+    // console.log(multBy(array, 15))
+    
+    // Array.prototype.multBy = function(n) {
+        //     console.log('multBy', this)
+        // }
+        
+        // array.multBy(2)
+        
+    Array.prototype.multBy = function(n) {
+        return this.map(function(i) {
+            return i * n 
+        })
+    }
 
-    Array
-
-    console.log(multBy(array, 15))
+    console.log(array.multBy(2))
 
     // -------------------------------------- //
-    // TIME | 9:33
+    // TIME | END
         
 });
