@@ -1,64 +1,70 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Урок 2. JavaScript. Что такое контекст this. Как работает call, bind, apply
+    // Урок 3. JavaScript. Что такое замыкания. Как они работают (+ примеры)
     // -------------------------------------- //
-
-    function hello() {
-        console.log('Hello', this)
-    }
-
-    const person = {
-        name: 'Andrey',
-        age: 31,
-        sayHello: hello,
-        sayHelloWindow: hello.bind(window),
-        logInfo: function(job, phone) {
-            console.log(`${this.name} info:`)
-            console.log(`Name is ${this.name}`)
-            console.log(`Age is ${this.age}`)
-            console.log(`Job is ${job}`)
-            console.log(`Phone is ${phone}`)
-            console.groupEnd()
-        }
-    }
-
-    const lena = {
-        name: 'Elena',
-        age: 23
-    }
-
-    // const fnLenaInfoLof = person.logInfo.bind(lena)()
-    // fnLenaInfoLof('Frontend', '8-999-123-12-23')
-
-    // person.logInfo.bind(lena, 'Frontend', '8-999-123-12-23')
-    // person.logInfo.call(lena, 'Frontend', '8-999-123-12-23')
-    // person.logInfo.apply(lena, ['Frontend', '8-999-123-12-23'])
-
-    const array = [1, 2, 3, 4, 5]
-
-    // function multBy(arr, n) {
-    //     return arr.map(function(i) {
-    //         return i * n
-    //     })
+    
+    // function createCalcFunction(n) {
+    //     return function() {
+    //         console.log(1000 * n)
+    //     }
     // }
     
-    // console.log(multBy(array, 15))
+    // const calc = createCalcFunction(42)
+    // calc()
     
-    // Array.prototype.multBy = function(n) {
-        //     console.log('multBy', this)
-        // }
-        
-        // array.multBy(2)
-        
-    Array.prototype.multBy = function(n) {
-        return this.map(function(i) {
-            return i * n 
-        })
-    }
+    // function createCalcFunction(n) {
+    //     return function(num) {
+    //         return n + num
+    //     }
+    // }
 
-    console.log(array.multBy(2))
+    // const addOne = createCalcFunction(1)
+    // const addTen = createCalcFunction(10)
+
+    // console.log(addOne(10))
+    // console.log(addOne(41))
+
+    // console.log(addTen(10))
+    // console.log(addTen(41))
+
+    // function urlGenerator(domain) {
+    //     return function(url) {
+    //         return `https://${url}.${domain}`
+    //     }
+    // }
+
+    // const comUrl = urlGenerator('com')
+    // const ruUrl = urlGenerator('ru')
+
+    // console.log(comUrl('google'))
+    // console.log(comUrl('netflix'))
+
+    // console.log(ruUrl('yandex'))
+    // console.log(ruUrl('vk'))
 
     // -------------------------------------- //
-    // TIME | END
+
+    /*
+    // Написать свою функцию bind
+    // Пример работы:
+    function logPerson() {
+        console.log(`Person: ${this.name}, ${this.age}, ${this.job})
+    }
+
+    const person1 = {name: 'Михаил', age: 22, job: 'Frontend'}
+    const person2 = {name: 'Елена', age: 19, job: 'SMM'}
+
+    bind(person1, logPerson)
+    bind(person1, logPerson)
+    */
+
+    function bind(context, fn) {
+        return function(...args) {
+            fn.apply(context, args)
+        }
+    }
+    
+    // -------------------------------------- //
+    // TIME | 00:00
         
 });
