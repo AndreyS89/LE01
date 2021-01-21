@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Написать свою функцию bind
     // Пример работы:
     function logPerson() {
-        console.log(`Person: ${this.name}, ${this.age}, ${this.job})
+        console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
     }
 
     const person1 = {name: 'Михаил', age: 22, job: 'Frontend'}
     const person2 = {name: 'Елена', age: 19, job: 'SMM'}
 
     bind(person1, logPerson)
-    bind(person1, logPerson)
+    bind(person2, logPerson)
     */
 
     function bind(context, fn) {
@@ -63,6 +63,16 @@ document.addEventListener("DOMContentLoaded", function() {
             fn.apply(context, args)
         }
     }
+
+    function logPerson() {
+        console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
+    }
+
+    const person1 = {name: 'Михаил', age: 22, job: 'Frontend'}
+    const person2 = {name: 'Елена', age: 19, job: 'SMM'}
+
+    bind(person1, logPerson)()
+    bind(person2, logPerson)()
     
     // -------------------------------------- //
     // TIME | 00:00
