@@ -1,26 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Урок 4. JavaScript. Асинхронность.Что такое Event Loop. JS SetTimeout 0
-    // https://youtu.be/vIZs5tH-HGQ
+    // Урок 5. JavaScript. Promise. Что это, как работает (+ пример)
+    // https://youtu.be/1idOY3C1gYU
     // -------------------------------------- //
     
-    console.log('Start')
+    // console.log('Request data...')
 
-    console.log('Start 2')
+    // setTimeout(() => {
+    //     console.log('Preparing data...')
 
-    function timeout2sec() {
-        console.log('timeout2sec')
-    }
+    //     const backendData = {
+    //         server: 'aws',
+    //         port: 2000,
+    //         status: 'working'
+    //     }
 
-    window.setTimeout(function() {
-        console.log('Inside timeout, after 2 second')
-    }, 200)
+    //     setTimeout(() => {
+    //         backendData.modified = true
+    //         console.log('Data received')
+    //     }, 2000)
+    // }, 2000)
 
-    setTimeout(timeout2sec, 2000)
-
-    console.log('End')
+    const p = new Promise(function(resolve, reject) {
+        setTimeout(() => {
+            console.log('Preparing data...')
+            const backendData = {
+                server: 'aws',
+                port: 2000,
+                status: 'working'
+            }
+        }, 2000)
+    })
+ 
+    p.then(() => {
+        console.log('Promise resolve')
+    })
 
     // -------------------------------------- //
-    // TIME | END
+    // TIME | 08:41
         
 });
