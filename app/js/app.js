@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('End')
 
     // -------------------------------------- //
-    // TIME | 05:36
+    // TIME | END
         
 });
