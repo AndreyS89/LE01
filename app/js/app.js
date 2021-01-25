@@ -29,14 +29,29 @@ document.addEventListener("DOMContentLoaded", function() {
                 port: 2000,
                 status: 'working'
             }
+            resolve(backendData)
         }, 2000)
     })
  
-    p.then(() => {
-        console.log('Promise resolve')
+    p.then(data => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                backendData.modified = true
+                resolve(data)
+                // console.log('Data received', backendData)
+            }, 2000)
+        })
     })
+    .then(clientData => {
+        clientData.fromPromise = true
+        return clientData
+    }).then(data => {
+        console.log('Modified', data)
+    })
+    .catch(err => console.log('Error: ', err))
+    .finally(() => console.log('Finally'))
 
     // -------------------------------------- //
-    // TIME | 08:41
+    // TIME | 17:30
         
 });
